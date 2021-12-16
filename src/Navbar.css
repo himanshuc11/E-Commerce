@@ -1,0 +1,13 @@
+li {
+    list-style: none;
+}
+
+.navbar {
+    background-color: cornsilk;
+    display: flex;
+}
+
+.navbar-element {
+    padding: 10px;
+    margin: 10px;
+}
