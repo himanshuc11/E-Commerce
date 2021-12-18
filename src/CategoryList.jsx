@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 import ProductList from "./ProductList"
 
-const CategoryList = () => {
+const CategoryList = ({user, setCart}) => {
 
     const params = useParams()
     
@@ -18,7 +18,7 @@ const CategoryList = () => {
     }, [params.categoryName])
 
     return (
-        <ProductList products={products}></ProductList>
+        <ProductList products={products}  user={user} setCart={setCart}></ProductList>
     )
 }
 

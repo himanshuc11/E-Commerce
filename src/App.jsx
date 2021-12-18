@@ -13,6 +13,8 @@ import ProductList from './ProductList'
 import Category from './Category'
 import CategoryList from './CategoryList'
 
+import Checkout from './Checkout'
+
 const App = () => {
 
     const [user, setUser] = useState(null)
@@ -35,7 +37,8 @@ const App = () => {
                     <Route path="/register" element={<SignUp></SignUp>}></Route>
                     <Route path="/product/:id" element={<Detail></Detail>}></Route>
                     <Route path="/categories" element={<Category></Category>}></Route>
-                    <Route path="/categories/:categoryName" element={<CategoryList></CategoryList>}></Route>
+                    <Route path="/categories/:categoryName" element={<CategoryList user={user} setCart={setCart}></CategoryList>}></Route>
+                    <Route path="/checkout" element={<Checkout cart={cart}></Checkout>}></Route>
                 </Routes>
             </>
     )
